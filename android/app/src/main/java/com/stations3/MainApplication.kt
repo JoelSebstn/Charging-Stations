@@ -1,4 +1,4 @@
-package com.stations3
+package com.stellantis.lithium
 
 import android.app.Application
 import com.facebook.react.PackageList
