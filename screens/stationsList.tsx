@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { FlatList, SafeAreaView, Text, TouchableOpacity, View } from "react-native"
 import { tempStationsData } from "../data/stations";
 import { Styles } from "../styles/ListScreenStyles";
+import firestore from '@react-native-firebase/firestore';
+
 
 
 export function ListStations({ navigation }: any) {
@@ -10,12 +12,12 @@ export function ListStations({ navigation }: any) {
     const [isLoading, setIsLoading] = useState(false);
     const [isRefreshing, setIsRefreshing] = useState(false);
     useEffect(() => {
-        // fetchStations();
+        fetchStations();
     });
     async function fetchStations() {
         try {
-            // const usersCollection = firestore().collection('locations').get();;
-            // console.log('usersCollection: ', usersCollection);
+            const locationCollection = await firestore().collection('locations').get();
+            console.log('locationCollection: ', locationCollection);
 
         }
         catch (error) {
