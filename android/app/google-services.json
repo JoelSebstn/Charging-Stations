@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "434129930199",
+    "firebase_url": "https://lithium-mvp-dev-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "lithium-mvp-dev",
+    "storage_bucket": "lithium-mvp-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434129930199:android:d9a449ad91a7d890586d92",
+        "android_client_info": {
+          "package_name": "com.experion.maserati.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434129930199-8dqajp3nh9gj8lf6q3je42q4qru41kel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDrhEpCjkT9fX6wtcsGQz3PIRf9J0KWcU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434129930199-8dqajp3nh9gj8lf6q3je42q4qru41kel.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "434129930199-24frblnsvj597f6pgtl175fnmr9ucamc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.stellantis.lithium"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434129930199:android:3ec8f660e0a54d4f586d92",
+        "android_client_info": {
+          "package_name": "com.stellantis.lithium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434129930199-qf6oi4hhhk33fe7i3cn26f932pnuq382.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stellantis.lithium",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "434129930199-8dqajp3nh9gj8lf6q3je42q4qru41kel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDrhEpCjkT9fX6wtcsGQz3PIRf9J0KWcU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434129930199-8dqajp3nh9gj8lf6q3je42q4qru41kel.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "434129930199-24frblnsvj597f6pgtl175fnmr9ucamc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.stellantis.lithium"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
