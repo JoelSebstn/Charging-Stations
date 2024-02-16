@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Text, View } from "react-native";
 import { ListStations } from "./screens/stationsList";
-import { DetailsScene } from "./screens/DetailsScene";
+import { DetailsScene } from "./screens/detailsScene";
 
 const Stack = createNativeStackNavigator();
 

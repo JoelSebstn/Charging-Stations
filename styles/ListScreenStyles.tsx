@@ -8,5 +8,10 @@ export const Styles = StyleSheet.create({
     addressStyle: { fontSize: 24, textAlign: 'center', },
     margin20: { marginBottom: 20 },
     margin40: { marginBottom: 40 },
-    flexRow: { flexDirection: 'row' }
+    flexRow: { flexDirection: 'row' },
+    horizontalLine: {
+        borderBottomColor: 'black',
+        borderBottomWidth: 2,
+    }
+
 });
