@@ -88,7 +88,8 @@ export function ListStations({ navigation }: any) {
     )
     function RenderItem(item: any) {
         let data = item["item"].data();
-        return (<TouchableOpacity onPress={() => navigation.navigate('DetailsSCene', { station: item })}>
+        let stationId = item["item"].data().id;
+        return (<TouchableOpacity onPress={() => navigation.navigate('DetailsSCene', { stationId: stationId })}>
             <View style={{ flexDirection: 'row', marginVertical: 12 }}>
                 <View style={Styles.alignCentre}><Text style={Styles.textFont22}>{data.name}</Text></View>
                 <View style={Styles.alignCentre}><Text style={Styles.textFont22}> {data.status}</Text></View>
