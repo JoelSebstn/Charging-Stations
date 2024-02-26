@@ -3,7 +3,9 @@ import { ActivityIndicator, FlatList, SafeAreaView, Text, TouchableOpacity, View
 import { Styles } from "./style";
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
-import { HeaderRow, RenderItem, renderFooter } from "./components";
+import { HeaderRow } from "./components/headerRow";
+import { RenderItem } from "./components/rederItem";
+import { renderFooter } from "./components/renderFooter";
 
 export function ListStations({ }, { navigation }: any) {
     const [stationsData, setStationsData] = useState<any[]>()

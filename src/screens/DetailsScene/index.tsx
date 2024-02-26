@@ -2,7 +2,7 @@ import { Text, View } from "react-native";
 import { useEffect, useState } from "react";
 import firestore from '@react-native-firebase/firestore';
 import { Styles } from "./styles";
-import { DetailsRow } from "./components";
+import { DetailsRow } from "./components/detailsRow";
 
 export function DetailsScene({ route }: any) {
     const stationId = route.params["stationId"];

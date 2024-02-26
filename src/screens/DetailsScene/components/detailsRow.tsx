@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { Styles } from "./styles";
+import { Styles } from "../styles";
 
 export function DetailsRow({ rowName, data }: any) {
     return (<View style={[Styles.flexRow, Styles.margin20]}>
