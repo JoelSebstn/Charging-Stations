@@ -12,6 +12,9 @@ export const Styles = StyleSheet.create({
     horizontalLine: {
         borderBottomColor: 'black',
         borderBottomWidth: 2,
-    }
+    },
+    rowMargin12:
+        { flexDirection: 'row', marginVertical: 12 }
+
 
 });

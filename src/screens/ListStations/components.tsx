@@ -18,7 +18,7 @@ export function RenderItem(item: any) {
     const navigation: any = useNavigation();
     return (
         <TouchableOpacity onPress={() => navigation.navigate('DetailsSCene', { stationId: stationId })}>
-            <View style={{ flexDirection: 'row', marginVertical: 12 }}>
+            <View style={Styles.rowMargin12}>
                 <View style={Styles.alignCentre}><Text style={Styles.textFont22}>{data.name}</Text></View>
                 <View style={Styles.alignCentre}><Text style={Styles.textFont22}> {data.status}</Text></View>
             </View>
