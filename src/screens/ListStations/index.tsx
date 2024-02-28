@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, FlatList, SafeAreaView, Text, TouchableOpacity, View } from "react-native"
-import { Styles } from "./style";
+import { FlatList, SafeAreaView, View } from "react-native"
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
 import { HeaderRow } from "./components/headerRow";
@@ -66,7 +65,7 @@ export function ListStations({ }, { navigation }: any) {
                 <FlatList
                     data={stationsData}
                     renderItem={({ item }) => (
-                        <RenderItem item={item} navigation={navigation} />
+                        <RenderItem item={item.data()} navigation={navigation} />
                     )
                     }
                     keyExtractor={(item, index) => String(index)}

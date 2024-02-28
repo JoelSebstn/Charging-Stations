@@ -3,8 +3,8 @@ import { TouchableOpacity, View, Text } from "react-native";
 import { Styles } from "../style";
 
 export function RenderItem(item: any) {
-    const data = item["item"].data();
-    const stationId = item["item"].data().id;
+    const data = item["item"];
+    const stationId = data.id;
     const navigation: any = useNavigation();
     return (
         <TouchableOpacity onPress={() => navigation.navigate('DetailsSCene', { stationId: stationId })}>
