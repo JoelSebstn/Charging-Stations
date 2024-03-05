@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { TouchableOpacity, View, Text } from "react-native";
-import { Styles } from "../style";
+import { Styles } from "./style";
 
 export function RenderItem(item: any) {
     const data = item["item"];

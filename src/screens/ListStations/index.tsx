@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { FlatList, SafeAreaView, View } from "react-native"
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
-import { HeaderRow } from "./components/headerRow";
-import { RenderItem } from "./components/rederItem";
-import { renderFooter } from "./components/renderFooter";
+import { HeaderRow } from "../../components/headerRow/headerRow";
+import { RenderItem } from "../../components/renderItem";
+import { renderFooter } from "../../components/renderFooter";
 
 export function ListStations({ }, { navigation }: any) {
     const [stationsData, setStationsData] = useState<any[]>()
@@ -60,19 +60,17 @@ export function ListStations({ }, { navigation }: any) {
     }
     return (
         <SafeAreaView >
-            <View>
-                <HeaderRow />
-                <FlatList
-                    data={stationsData}
-                    renderItem={({ item }) => (
-                        <RenderItem item={item.data()} navigation={navigation} />
-                    )
-                    }
-                    keyExtractor={(item, index) => String(index)}
-                    ListFooterComponent={renderFooter(isLoading)}
-                    onEndReached={fetchMore}
-                    onEndReachedThreshold={3}
-                /></View >
+            <HeaderRow />
+            <FlatList
+                data={stationsData}
+                renderItem={({ item }) => (
+                    <RenderItem item={item.data()} navigation={navigation} />)
+                }
+                keyExtractor={(item, index) => String(index)}
+                ListFooterComponent={renderFooter(isLoading)}
+                onEndReached={fetchMore}
+                onEndReachedThreshold={3}
+            />
         </SafeAreaView >
     )
 }
