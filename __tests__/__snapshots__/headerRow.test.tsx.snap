@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TEst Header Row Matches Header Snapshot 1`] = `
+[
+  <View
+    style={
+      {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+      testID=""
+    >
+      <Text
+        style={
+          {
+            "fontSize": 22,
+          }
+        }
+      >
+        Name
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 22,
+          }
+        }
+      >
+         Status
+      </Text>
+    </View>
+  </View>,
+  <View
+    style={
+      {
+        "borderBottomColor": "black",
+        "borderBottomWidth": 2,
+      }
+    }
+  />,
+]
+`;
+
+exports[`asd Matches Header Snapshot 1`] = `
+[
+  <View
+    style={
+      {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 22,
+          }
+        }
+      >
+        Name
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 22,
+          }
+        }
+      >
+         Status
+      </Text>
+    </View>
+  </View>,
+  <View
+    style={
+      {
+        "borderBottomColor": "black",
+        "borderBottomWidth": 2,
+      }
+    }
+  />,
+]
+`;

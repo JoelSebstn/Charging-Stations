@@ -18,11 +18,4 @@ describe('sample', () => {
 
         expect(2 + 1).toBe(3);
     })
-    it('should render the label of the social link', () => {
-        const { getByText } = render(
-            <HeaderRow />,
-        );
-        const label = getByText("Name");
-        expect(label).toBeTruthy();
-    });
 })

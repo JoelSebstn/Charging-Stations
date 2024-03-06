@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test details ROw Componet Matches Detail Snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "flexDirection": "row",
+      },
+      {
+        "marginBottom": 20,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 22,
+        }
+      }
+    >
+      Status
+      :
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 22,
+        }
+      }
+    >
+       
+      Available
+    </Text>
+  </View>
+</View>
+`;
