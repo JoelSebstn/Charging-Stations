@@ -12,10 +12,8 @@ import { it } from '@jest/globals';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 import { HeaderRow } from '../src/components/headerRow/headerRow';
-import { render } from '@testing-library/react-native';
-describe('sample', () => {
-    it(`tests sample add`, () => {
-
-        expect(2 + 1).toBe(3);
-    })
+import { render, screen } from '@testing-library/react-native';
+describe('test app', () => {
+    // Render the app from teh root
+    // render(<App />);
 })

@@ -9,6 +9,7 @@ exports[`Test details ROw Componet Matches Detail Snapshot 1`] = `
       },
       {
         "marginBottom": 20,
+        "marginHorizontal": 8,
       },
     ]
   }
@@ -16,7 +17,7 @@ exports[`Test details ROw Componet Matches Detail Snapshot 1`] = `
   <View
     style={
       {
-        "alignItems": "center",
+        "alignItems": "flex-start",
         "flex": 1,
       }
     }
@@ -35,7 +36,7 @@ exports[`Test details ROw Componet Matches Detail Snapshot 1`] = `
   <View
     style={
       {
-        "alignItems": "center",
+        "alignItems": "flex-start",
         "flex": 1,
       }
     }
