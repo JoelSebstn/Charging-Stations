@@ -29,7 +29,6 @@ export async function fetchMoreStationsFromFirebase(setIsLoading: any, setStatio
     firestore().collection('locations')
         .orderBy('id').limit(10).startAfter(lastVisible).onSnapshot(
             querySnapshot => {
-                console.log('list Updated ');
                 let newList = stationsData?.concat(querySnapshot.docs);
                 setStationsData(newList);
                 setLastVisible(newList?.[newList?.length - 1].data().id);
