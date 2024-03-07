@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { FlatList, SafeAreaView, View } from "react-native"
-import firestore from '@react-native-firebase/firestore';
-import auth from '@react-native-firebase/auth';
 import { HeaderRow } from "../../components/headerRow/headerRow";
 import { RenderItem } from "../../components/renderItem";
 import { renderFooter } from "../../components/renderFooter";
+import { anonymousAuthentication, fetchMoreStationsFromFirebase, fetchStationsFromFirebase } from "../../utilities/firebase";
 
 export function ListStations({ }, { navigation }: any) {
     const [stationsData, setStationsData] = useState<any[]>()
@@ -18,24 +17,8 @@ export function ListStations({ }, { navigation }: any) {
     );
     async function fetchStations() {
         try {
-            await auth()
-                .signInAnonymously()
-                .then(() => {
-                    console.log('User signed in anonymously');
-                })
-                .catch(error => {
-                    if (error.code === 'auth/operation-not-allowed') {
-                        console.log('Enable anonymous in your firebase console.');
-                    }
-                    console.error(error);
-                });
-            firestore().collection('locations')
-                .orderBy('id').limit(10).onSnapshot(
-                    querySnapshot => {
-                        setStationsData(querySnapshot.docs);
-                        setLastVisible(querySnapshot.docs[querySnapshot.size - 1].data().id);
-                    },
-                );
+            await anonymousAuthentication();
+            fetchStationsFromFirebase(setStationsData, setLastVisible)
         }
         catch (error) {
             console.log("error:", error);
@@ -43,17 +26,7 @@ export function ListStations({ }, { navigation }: any) {
     }
     async function fetchMore() {
         try {
-            setIsLoading(true);
-            firestore().collection('locations')
-                .orderBy('id').limit(10).startAfter(lastVisible).onSnapshot(
-                    querySnapshot => {
-                        console.log('list Updated ');
-                        let newList = stationsData?.concat(querySnapshot.docs);
-                        setStationsData(newList);
-                        setLastVisible(newList?.[newList?.length - 1].data().id);
-                    }
-                );
-            setIsLoading(false);
+            fetchMoreStationsFromFirebase(setIsLoading, setStationsData, setLastVisible, lastVisible, stationsData)
         } catch (error) {
             console.log("error:", error);
         }
