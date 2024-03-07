@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import firestore from '@react-native-firebase/firestore';
 import { Styles } from "./styles";
 import { DetailsRow } from "../../components/detailsRow";
+import { fetchStationDetails } from "../../utilities/firebaseServices";
 
 export function DetailsScene({ route }: any) {
     const stationId = route.params["stationId"];
@@ -10,12 +11,9 @@ export function DetailsScene({ route }: any) {
     useEffect(() => {
         fetchStations();
     }, []);
-    async function fetchStations() {
+    function fetchStations() {
         try {
-            await firestore().collection('locations').doc(stationId)
-                .onSnapshot(documentSnapshot => {
-                    setStationDetails(documentSnapshot.data());
-                });
+            fetchStationDetails(stationId, setStationDetails);
         }
         catch (error) {
             console.log("errorCAtched:", error);

@@ -3,7 +3,7 @@ import { FlatList, SafeAreaView, View } from "react-native"
 import { HeaderRow } from "../../components/headerRow/headerRow";
 import { RenderItem } from "../../components/renderItem";
 import { renderFooter } from "../../components/renderFooter";
-import { anonymousAuthentication, fetchMoreStationsFromFirebase, fetchStationsFromFirebase } from "../../utilities/firebase";
+import { anonymousAuthentication, fetchMoreStationsFromFirebase, fetchStationsFromFirebase } from "../../utilities/firebaseServices";
 
 export function ListStations({ }, { navigation }: any) {
     const [stationsData, setStationsData] = useState<any[]>()

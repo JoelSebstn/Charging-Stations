@@ -36,3 +36,9 @@ export async function fetchMoreStationsFromFirebase(setIsLoading: any, setStatio
         );
     setIsLoading(false);
 }
+export async function fetchStationDetails(stationId: any, setStationDetails: any) {
+    firestore().collection('locations').doc(stationId)
+        .onSnapshot(documentSnapshot => {
+            setStationDetails(documentSnapshot.data());
+        });
+}
