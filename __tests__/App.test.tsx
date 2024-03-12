@@ -15,5 +15,5 @@ import { HeaderRow } from '../src/components/headerRow/headerRow';
 import { render, screen } from '@testing-library/react-native';
 describe('test app', () => {
     // Render the app from teh root
-    // render(<App />);
+    it('',()=>{})
 })

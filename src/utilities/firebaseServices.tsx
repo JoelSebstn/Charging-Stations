@@ -1,7 +1,6 @@
 
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
-import { SetStateAction } from 'react';
 export async function anonymousAuthentication() {
     await auth()
         .signInAnonymously()
@@ -15,23 +14,33 @@ export async function anonymousAuthentication() {
             console.error(error);
         });
 }
-export async function fetchStationsFromFirebase(setStationsData: any, setLastVisible: any) {
+// export async function fetchStationsFromFirebase() {
+export const fetchStationsFromFirebase = async (setStationsData: any, setLastVisible: any) => {
     firestore().collection('locations')
         .orderBy('id').limit(10).onSnapshot(
             querySnapshot => {
-                setStationsData(querySnapshot.docs);
+                const data: any = [];
+                querySnapshot.forEach(doc => {
+                    data.push(doc.data());
+                });
+                setStationsData(data);
                 setLastVisible(querySnapshot.docs[querySnapshot.size - 1].data().id);
-            },
+            }
         );
+    console.log('point3');
 }
 export async function fetchMoreStationsFromFirebase(setIsLoading: any, setStationsData: any, setLastVisible: any, lastVisible: any, stationsData: any) {
     setIsLoading(true);
     firestore().collection('locations')
         .orderBy('id').limit(10).startAfter(lastVisible).onSnapshot(
             querySnapshot => {
-                let newList = stationsData?.concat(querySnapshot.docs);
+                const data: any = [];
+                querySnapshot.forEach(doc => {
+                    data.push(doc.data());
+                });
+                const newList = stationsData?.concat(data);
                 setStationsData(newList);
-                setLastVisible(newList?.[newList?.length - 1].data().id);
+                setLastVisible(newList?.[newList?.length - 1].id);
             }
         );
     setIsLoading(false);

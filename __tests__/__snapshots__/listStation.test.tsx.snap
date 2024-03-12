@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test list screens Matches screen Snapshot 1`] = `
+<RCTSafeAreaView>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 22,
+          }
+        }
+      >
+        Name
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 22,
+          }
+        }
+      >
+         Status
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "borderBottomColor": "black",
+        "borderBottomWidth": 2,
+      }
+    }
+  />
+  <RCTScrollView
+    ListFooterComponent={<ActivityIndicator />}
+    data={
+      [
+        {
+          "id": 1,
+          "name": "Job Richi",
+          "status": "Available",
+        },
+        {
+          "id": 2,
+          "name": "Ivan mark",
+          "status": "Unknown",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={3}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "marginVertical": 12,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "flex": 1,
+                  "marginLeft": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 22,
+                  }
+                }
+              >
+                Job Richi
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "flex": 1,
+                  "marginLeft": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 22,
+                  }
+                }
+              >
+                 
+                Available
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "flexDirection": "row",
+                "marginVertical": 12,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "flex": 1,
+                  "marginLeft": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 22,
+                  }
+                }
+              >
+                Ivan mark
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "flex-start",
+                  "flex": 1,
+                  "marginLeft": 8,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 22,
+                  }
+                }
+              >
+                 
+                Unknown
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+      >
+        <ActivityIndicator />
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

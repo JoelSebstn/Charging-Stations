@@ -16,7 +16,6 @@ exports[`TEst Header Row Matches Header Snapshot 1`] = `
           "flex": 1,
         }
       }
-      testID=""
     >
       <Text
         style={

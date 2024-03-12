@@ -18,10 +18,11 @@ export function ListStations({ }, { navigation }: any) {
     async function fetchStations() {
         try {
             await anonymousAuthentication();
-            fetchStationsFromFirebase(setStationsData, setLastVisible)
+            await fetchStationsFromFirebase(setStationsData, setLastVisible)
+            console.log('stationsData***: ', stationsData);
         }
         catch (error) {
-            console.log("error:", error);
+            console.log("error for Firebase:", error);
         }
     }
     async function fetchMore() {
@@ -37,7 +38,7 @@ export function ListStations({ }, { navigation }: any) {
             <FlatList
                 data={stationsData}
                 renderItem={({ item }) => (
-                    <RenderItem item={item.data()} navigation={navigation} />)
+                    <RenderItem item={item} navigation={navigation} />)
                 }
                 keyExtractor={(item, index) => String(index)}
                 ListFooterComponent={renderFooter(isLoading)}
