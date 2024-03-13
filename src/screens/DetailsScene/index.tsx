@@ -29,6 +29,7 @@ export function DetailsScene({ route }: any) {
             <DetailsRow rowName={'Operator'} data={stationDetails["operator"]} />
             <DetailsRow rowName={'Parking Access'} data={stationDetails["parkingAccess"]} />
             <DetailsRow rowName={'Status'} data={stationDetails["status"]} />
-        </View >)
+        </View >
+    )
 
 }

@@ -15,27 +15,6 @@ describe("Test list screens", () => {
             { id: 1, "name": 'Job Richi', "status": "Available" },
             { id: 2, "name": 'Ivan mark', "status": "Unknown" },
         ];
-
-        // // Mock onSnapshot function
-        // const mockOnSnapshot = jest.fn().mockImplementation(callback => {
-        //     callback({
-        //         forEach: jest.fn(fn => mockSnapshotData.forEach(fn)),
-        //     });
-        // });
-
-        // // Mock Firestore collection
-        // const mockCollection = jest.fn().mockReturnValue({
-        //     orderBy: jest.fn().mockReturnValue({
-        //         limit: jest.fn().mockReturnValue({
-        //             onSnapshot: mockOnSnapshot,
-        //         }),
-        //     }),
-        // });
-
-        // // Mock Firestore
-        // jest.fn().mockReturnValue({
-        //     collection: mockCollection,
-        // });
         const setStateMock = jest.fn();
         jest.spyOn(React, 'useState').mockReturnValue([mockSnapshotData, setStateMock]);
         const { getByText } = render(
@@ -47,8 +26,6 @@ describe("Test list screens", () => {
     it('screen renders status correctly', () => {
         const { getByText } = render(
             <NavigationContainer><ListStations /></NavigationContainer>,);
-
-        // Assert that your component renders correctly based on the mock data
         expect(getByText('Available')).toBeTruthy();
     })
     it("Matches screen Snapshot", () => {

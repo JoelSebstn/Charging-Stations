@@ -21,6 +21,7 @@ exports[`Test details ROw Componet Matches Detail Snapshot 1`] = `
         "flex": 1,
       }
     }
+    testID="detailsRowInnerView"
   >
     <Text
       style={
