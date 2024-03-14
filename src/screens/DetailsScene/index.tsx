@@ -16,7 +16,7 @@ export function DetailsScene({ route }: any) {
             fetchStationDetails(stationId, setStationDetails);
         }
         catch (error) {
-            console.log("errorCAtched:", error);
+            console.log("error:", error);
         }
     }
     return (
